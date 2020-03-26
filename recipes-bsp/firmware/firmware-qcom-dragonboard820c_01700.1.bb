@@ -26,7 +26,7 @@ do_install() {
     install -m 0444 ./proprietary-linux/adsp.* ${D}${nonarch_base_libdir}/firmware/qcom/msm8996/
 
     install -d ${D}${sysconfdir}/
-    install -m 0644 LICENSE ${D}${sysconfdir}/QCOM-LINUX-BOARD-SUPPORT-LICENSE
+    install -m 0644 LICENSE ${D}${sysconfdir}/QCOM-LINUX-BOARD-SUPPORT-LICENSE_dragonboard-820c
 }
 
 FILES_${PN} += "${nonarch_base_libdir}/firmware/*"
@@ -39,7 +39,3 @@ RCONFLICTS_${PN} += "linux-firmware-qcom-adreno-a530"
 RPROVIDES_${PN} += "linux-firmware-qcom-venus-4.2"
 RREPLACES_${PN} += "linux-firmware-qcom-venus-4.2"
 RCONFLICTS_${PN} += "linux-firmware-qcom-venus-4.2"
-
-RPROVIDES_${PN} += "linux-firmware-qcom-license"
-RREPLACES_${PN} += "linux-firmware-qcom-license"
-RCONFLICTS_${PN} += "linux-firmware-qcom-license"

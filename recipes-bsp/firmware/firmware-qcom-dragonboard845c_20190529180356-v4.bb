@@ -30,7 +30,7 @@ do_install() {
     install -m 0444 ./38-bdwlan_split/bdwlan*.* ${D}${nonarch_base_libdir}/firmware/
 
     install -d ${D}${sysconfdir}/
-    install -m 0644 LICENSE.qcom.txt ${D}${sysconfdir}/QCOM-LINUX-BOARD-SUPPORT-LICENSE
+    install -m 0644 LICENSE.qcom.txt ${D}${sysconfdir}/QCOM-LINUX-BOARD-SUPPORT-LICENSE_dragonboard-845c
 }
 
 FILES_${PN} += "${nonarch_base_libdir}/firmware/*"
@@ -43,7 +43,3 @@ RCONFLICTS_${PN} += "linux-firmware-qcom-adreno-a630"
 RPROVIDES_${PN} += "linux-firmware-qcom-venus-5.2"
 RREPLACES_${PN} += "linux-firmware-qcom-venus-5.2"
 RCONFLICTS_${PN} += "linux-firmware-qcom-venus-5.2"
-
-RPROVIDES_${PN} += "linux-firmware-qcom-license"
-RREPLACES_${PN} += "linux-firmware-qcom-license"
-RCONFLICTS_${PN} += "linux-firmware-qcom-license"

@@ -37,7 +37,7 @@ do_install() {
     done
 
     install -d ${D}${sysconfdir}/
-    install -m 0644 LICENSE ${D}${sysconfdir}/QCOM-LINUX-BOARD-SUPPORT-LICENSE
+    install -m 0644 LICENSE ${D}${sysconfdir}/QCOM-LINUX-BOARD-SUPPORT-LICENSE_dragonboard-410c
 }
 
 FILES_${PN} += "${nonarch_base_libdir}/firmware/*"
@@ -51,7 +51,3 @@ RCONFLICTS_${PN} += "linux-firmware-qcom-adreno-a3xx"
 RPROVIDES_${PN} += "linux-firmware-qcom-venus-1.8"
 RREPLACES_${PN} += "linux-firmware-qcom-venus-1.8"
 RCONFLICTS_${PN} += "linux-firmware-qcom-venus-1.8"
-
-RPROVIDES_${PN} += "linux-firmware-qcom-license"
-RREPLACES_${PN} += "linux-firmware-qcom-license"
-RCONFLICTS_${PN} += "linux-firmware-qcom-license"
